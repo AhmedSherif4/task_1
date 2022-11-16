@@ -24,19 +24,17 @@ class TaskView extends StatelessWidget {
                 const SizedBox(height: 25),
                 gridViewWidget(context),
                 ((listOfIconsAndStringsBottoms.length.isOdd &&
-                            AppData(context).mediaQueryOf.orientation ==
-                                Orientation.portrait) ||
-                        (listOfIconsAndStringsBottoms.length.isOdd &&
-                            AppData(context).mediaQueryOf.orientation ==
-                                Orientation.landscape &&
-                            listOfIconsAndStringsBottoms.length % 3 == 1))
+                    AppData(context).mediaQueryOf.orientation ==
+                        Orientation.portrait) ||
+                    (listOfIconsAndStringsBottoms.length.isOdd &&
+                        AppData(context).mediaQueryOf.orientation ==
+                            Orientation.landscape &&
+                        listOfIconsAndStringsBottoms.length % 3 == 1))
                     ? bottomTask(
-                        context: context,
-                        text: listOfIconsAndStringsBottoms[numbOfList - 1]
-                            ['text'],
-                        icon: listOfIconsAndStringsBottoms[numbOfList - 1]
-                            ['icon'],
-                      )
+                  context: context,
+                  text: listOfIconsAndStringsBottoms[numbOfList - 1]['text'],
+                  icon: listOfIconsAndStringsBottoms[numbOfList - 1]['icon'],
+                )
                     : const SizedBox(),
               ],
             ),
@@ -45,5 +43,4 @@ class TaskView extends StatelessWidget {
       ),
     );
   }
-
 }
